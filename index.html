@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link id="stylesheet" rel="stylesheet" href="style1.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+  <div id="container" class="container">
+    <div class="top-section">  
+      <div id="header" class="header">
+        <p>calc</p>
+      </div>
+      <div id="theme" class="theme">
+        <p>THEME</p>
+      </div>
+        <div class="radio-button-and-label">
+
+          <label for="first-theme" class="toggle-label first-toggle-label">1</label>
+
+          <label for="second-theme" class="toggle-label second-toggle-label">2</label>
+
+          <label for="third-theme" class="toggle-label third-toggle-label">3</label>
+
+          <input type="radio" class="three-state-toggle-button" id="first-theme" name="toggle-option">
+        
+
+          <input type="radio" class="three-state-toggle-button" id="second-theme" name="toggle-option">
+          
+
+          <input type="radio" class="three-state-toggle-button" id="third-theme" name="toggle-option">
+          
+
+          <div class="slide-toggle"></div>
+
+        </div>
+      </div>
+    <div id="input" class="input">
+      <span id= "result" type="input"></span>
+    </div>
+    <div id="buttons" class="buttons">
+      <div class="line">
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button class="del" value="del">DEL</button>
+      </div>
+      <div class="line">
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button value="+">+</button>
+      </div>
+      <div class="line">
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button value="-">-</button>
+      </div>
+      <div class="line">
+        <button value=".">.</button>
+        <button value="0">0</button>
+        <button value="/">/</button>
+        <button value="*">x</button>
+      </div>
+      <div class="display-and-reset">
+        <div  class="reset">
+          <button id="reset" value="RESET">RESET</button>
+        </div>
+        <div  class="calculate">
+          <button value="=">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascipt.js"></script>
+
+</body>
+</html>

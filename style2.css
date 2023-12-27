@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* backgrounds */
+    --main-background: #E6E6E6;
+    --toggle-background-keypad-background: #D3CDCD;
+    --screen-background: #EEEEEE;
+    /* keys */
+    --key-shadow: hsl(224, 28%, 35%);
+    --key-background-toggle: #CA5303;
+    --key-background-hover-toggle: #FA8A3B;
+    --key-red-shadow: hsl(6, 70%, 34%);
+    --key-background: hsl(30, 25%, 89%);
+    --key-hover: #FFFFFF;
+    --key-shadow: hsl(28, 16%, 65%);
+    --blue-key-shadow: #1C6167;
+    --blue-key: #398087;
+    --blue-key-hover: #62B4BE;
+    /* text */
+    --brown: #33332A;
+    --white: hsl(0, 0%, 100%);
+
+}
+
+
+* {
+    font-family: League Spartan;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 100%;
+}
+
+body {
+    background-color: var(--main-background);
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.container {
+    display: block;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 440px;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: end;
+    margin-bottom: 20px;
+    color: var(--brown);
+}
+
+
+.header p{
+    text-indent: 10px;
+    font-weight: 700;
+    font-size: 30px;
+
+}
+
+.theme {
+    padding-right: 20px;
+    display: flex;
+
+}
+
+.theme p{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* radio buttons */
+
+.radio-button-and-label {
+    display: flex;
+    position: relative;
+    background-color: var(--toggle-background-keypad-background);
+    height: 17px;
+    max-width: 50px;
+    border-radius: 50px;
+}
+
+.toggle-label p{
+    margin: 0;
+    
+}
+
+.toggle-label {
+    font-weight: 700;
+    position: absolute;
+    height: 20px;
+    top: -15px;
+    bottom: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.first-toggle-label {
+    left: 7px;
+}
+
+.second-toggle-label {
+    left: 22px;
+}
+
+.third-toggle-label {
+    left: 38px;
+}
+
+.radio-button-and-label input {
+    display: flex;
+    flex-direction: row;
+    appearance: none;
+    cursor: pointer;
+}
+
+.slide-toggle {
+    left: 4px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--key-background-toggle);
+    position: absolute;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.slide-toggle:hover{
+    background-color: var(--key-background-hover-toggle);
+}
+
+
+#second-theme:checked ~ .slide-toggle {
+    left: 19px;
+}
+
+/* end of radio buttons */
+
+
+
+.input {
+    display: flex;
+    text-align: right;
+    overflow: hidden;
+}
+
+
+
+.input span {
+    display: flex;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--brown);
+    background-color: var(--screen-background);
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    pointer-events: none;
+    justify-content: right;
+    align-items: center;
+}
+
+.line {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+button {
+    color: var(--very-dark-grayish-blue);
+    font-size: 30px;
+    width: 22%;
+    height: 50px;
+    padding: 10px;
+    margin: 9px;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    box-shadow:0px 5px 0px 0px var(--key-shadow) ;
+}
+
+button:hover {
+    background-color: var(--key-hover);
+}
+
+.del {
+    background-color: var(--blue-key);
+    box-shadow:0px 5px 0px 0px var(--blue-key-shadow);
+    color: var(--white);
+}
+
+.del:hover{
+    background-color: var(--blue-key-hover);
+}
+
+.buttons {
+    padding-top: 20px;
+    background-color: var(--toggle-background-keypad-background);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.display-and-reset {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.reset {
+    display: flex;
+    justify-content: right;
+}
+
+.reset button {
+    width: 95%;
+    background-color: var(--blue-key);
+    box-shadow:0px 5px 0px 0px var(--blue-key-shadow);
+    color: var(--white);
+
+}
+
+.reset button:hover{
+    background-color: var(--blue-key-hover);
+}
+
+.calculate {
+    display: flex;
+    justify-content: left;
+}
+
+.calculate button {
+    width: 95%;
+    background-color: var( --key-background-toggle);
+    box-shadow:0px 5px 0px 0px var(--key-red-shadow);
+    color: var(--white);
+    
+}
+
+.calculate button:hover {
+    background-color: var(--key-background-hover-toggle);
+}
